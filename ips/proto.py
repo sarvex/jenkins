@@ -31,7 +31,7 @@ version = builder.props['version']
 if version.endswith("-SNAPSHOT"):
     version = version[:-9];
 
-pkg = builder.build_pkg(name="jenkins", version=version+",0-0")
+pkg = builder.build_pkg(name="jenkins", version=f"{version},0-0")
 pkg.update({
     "attributes"    : { 
         "pkg.summary" : "Jenkins", 
